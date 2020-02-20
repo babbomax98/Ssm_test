@@ -26,6 +26,13 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+<!--    JSP包-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.0</version>
+    </dependency>
+
     <!--springmvc spring 包  -->
 
     <dependency>
@@ -60,6 +67,35 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
       <version>5.1.5.RELEASE</version>
+    </dependency>
+    <!--引入pageHelper分页插件 -->
+    <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.1.8</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.sf.jsqlparser/jsqlparser -->
+    <dependency>
+      <groupId>net.sf.jsqlparser</groupId>
+      <artifactId>jsqlparser</artifactId>
+      <version>0.8.0</version>
+    </dependency>
+
+
+    <!--JSR303校验支持器 -->
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.1.1.Final</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.10.1</version>
     </dependency>
 
 
@@ -156,7 +192,7 @@
         <configuration>
           <configurationFile>src/main/resources/generateconfig.xml</configurationFile>
           <verbose>true</verbose>
-          <overwrite>true</overwrite>
+          <overwrite>false</overwrite>
         </configuration>
       </plugin>
       <!-- /. -->

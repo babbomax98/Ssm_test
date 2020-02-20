@@ -10,6 +10,9 @@ public class Department {
         this.deptName = deptName;
     }
 
+    public Department() {
+    }
+
     public Integer getDeptId() {
         return deptId;
     }

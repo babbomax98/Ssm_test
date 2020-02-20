@@ -2,10 +2,17 @@ package com.edu.mapper;
 
 import com.edu.pojo.Employee;
 import com.edu.pojo.EmployeeExample;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface EmployeeMapper {
-    int deleteByPrimaryKey(Integer id);
+
+    long countByExample(EmployeeExample example);
+
+    int deleteByExample(EmployeeExample example);
+
+    int deleteByPrimaryKey(Integer empId);
 
     int insert(Employee record);
 
@@ -13,7 +20,15 @@ public interface EmployeeMapper {
 
     List<Employee> selectByExample(EmployeeExample example);
 
-    Employee selectByPrimaryKey(Integer id);
+    Employee selectByPrimaryKey(Integer empId);
+
+    List<Employee> selectByExampleWithDept(EmployeeExample example);
+
+    Employee selectByPrimaryKeyWithDept(Integer empId);
+
+    int updateByExampleSelective(@Param("record") Employee record, @Param("example") EmployeeExample example);
+
+    int updateByExample(@Param("record") Employee record, @Param("example") EmployeeExample example);
 
     int updateByPrimaryKeySelective(Employee record);
 
